@@ -210,4 +210,38 @@ body {
   .logo {
     margin-bottom: 1rem;         /* Add space below the logo */
   }
+
+  /* Make the footer stack its items vertically */
+  .footer {
+    flex-direction: column;      /* Stack items on small screens */
+    align-items: flex-start;     /* Align items to the left */
+    padding: 1rem;               /* Less padding on small screens */
+  }
+
+  .footer .logo {
+    margin-bottom: 1rem;         /* Add space below the logo */
+  }
+}
+
+/* This styles the footer to look like the header */
+.footer {
+  background-color: #fff7e5;    /* Same background as header */
+  display: flex;                /* Use flexbox for layout */
+  justify-content: space-between; /* Space out the content */
+  align-items: center;          /* Center items vertically */
+  padding: 2rem 2rem;           /* Same padding as header */
+  border-top: 2px solid #FFC907; /* Optional: add a top border for separation */
+}
+
+/* Make sure the logo in the footer looks the same */
+.footer .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Make the footer text dark blue for contrast */
+.footer p {
+  color: #002f6c;
+  font-size: 1rem;
 }
