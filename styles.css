@@ -146,3 +146,68 @@ body {
   font-size: 1rem;        /* Sets the text size */
   text-align: center;     /* Centers the text */
 }
+
+/* You can add a hover effect to buttons using the :hover selector.
+   This changes the button's style when the mouse is over it.
+*/
+
+.donate-btn:hover,
+.cta-form button:hover {
+  background-color: #2E9DF7; /* Changes the background to blue on hover */
+  color: #fff;               /* Makes the text white */
+  cursor: pointer;           /* Shows a pointer cursor to indicate it's clickable */
+  /* You can add more styles if you like, such as a slight shadow: */
+  /* box-shadow: 0 2px 8px rgba(46,157,247,0.2); */
+}
+
+/* Media queries help your website look good on all screen sizes.
+   The code below changes some styles when the screen is 600px wide or less (like on a phone).
+*/
+@media (max-width: 600px) {
+  /* Stack the main content and image on top of each other instead of side by side */
+  .main-section {
+    flex-direction: column;      /* Puts items in a column (top to bottom) */
+    padding: 2rem 1rem;          /* Less padding on small screens */
+  }
+
+  /* Make the text content take up the full width */
+  .text-content {
+    max-width: 100%;             /* Use all available space */
+    margin-bottom: 1rem;         /* Less space at the bottom */
+  }
+
+  /* Make the image smaller and centered */
+  .image-content {
+    min-width: 0;                /* Remove minimum width */
+    max-width: 100%;             /* Use all available space */
+    padding-right: 0;            /* Remove extra space on the right */
+    margin: 0 auto 1rem auto;    /* Center the image and add space below */
+    justify-content: center;     /* Center the image horizontally */
+  }
+
+  .image-content img {
+    width: 100%;                 /* Make the image fill the container */
+    height: auto;                /* Keep the image shape correct */
+    max-width: 300px;            /* Don't let the image get too big */
+    display: block;              /* Remove extra space below the image */
+    margin: 0 auto;              /* Center the image */
+  }
+
+  /* Make buttons and inputs easier to tap */
+  .cta-form input[type="text"],
+  .cta-form button {
+    width: 100%;                 /* Make them full width */
+    margin-bottom: 0.5rem;       /* Add space below each */
+  }
+
+  /* Make the header stack its items vertically */
+  .header {
+    flex-direction: column;      /* Stack logo and button */
+    align-items: flex-start;     /* Align items to the left */
+    padding: 1rem;               /* Less padding */
+  }
+
+  .logo {
+    margin-bottom: 1rem;         /* Add space below the logo */
+  }
+}
